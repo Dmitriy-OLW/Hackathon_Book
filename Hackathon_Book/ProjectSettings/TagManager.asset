@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Predmets
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Displayed
@@ -34,7 +35,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Predmets
   - 
   - 
   m_SortingLayers:
