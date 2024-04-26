@@ -242,10 +242,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1.2000122}
-      m_SelectedIDs: c2ad0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: c6dcffffcee0ffffd2faffff86aa0000
+      scrollPos: {x: 0, y: 82.79999}
+      m_SelectedIDs: 7af0ffff
+      m_LastClickedID: -3974
+      m_ExpandedIDs: aaecffff62f2ffffd0faffffd2faffff2aaa0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -262,7 +262,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -845,9 +845,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -6.6474266, y: 8.6821, z: 35.84365}
+    m_Target: {x: 1.4834335, y: -1.1899593, z: -2.1326962}
     speed: 2
-    m_Value: {x: -6.6474266, y: 8.6821, z: 35.84365}
+    m_Value: {x: 1.4834335, y: -1.1899593, z: -2.1326962}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -893,13 +893,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.109958746, y: -0.8597901, z: 0.2087653, w: 0.45287162}
+    m_Target: {x: -0.002266718, y: -0.993961, z: 0.020874372, w: -0.10777071}
     speed: 2
-    m_Value: {x: 0.10995845, y: -0.8597877, z: 0.20876473, w: 0.45287037}
+    m_Value: {x: -0.0022667025, y: -0.9939541, z: 0.020874228, w: -0.107769966}
   m_Size:
-    m_Target: 28.0153
+    m_Target: 0.51674503
     speed: 2
-    m_Value: 28.0153
+    m_Value: 0.51674503
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1361,7 +1361,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/Forest_1
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1371,16 +1371,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 74
   m_LastFolders:
-  - Assets/Models/Forest_1
+  - Assets/Scripts
   m_LastFoldersGridSize: 74
   m_LastProjectPath: E:\GitHub_repositories_Projects\Hackathon_Book\Hackathon_Book
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 135}
-    m_SelectedIDs: c2ad0000
-    m_LastClickedID: 44482
-    m_ExpandedIDs: 000000009cac00009eac0000a0ac0000a2ac0000a4ac0000a6ac0000a8ac0000a0ad000000ca9a3b
+    scrollPos: {x: 0, y: 165.40002}
+    m_SelectedIDs: b6ad0000
+    m_LastClickedID: 44470
+    m_ExpandedIDs: 000000009cac00009eac0000a0ac0000a2ac0000a4ac0000a6ac0000a8ac0000acad000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1435,8 +1435,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c2ad0000
-    m_LastClickedInstanceID: 44482
+    m_SelectedInstanceIDs: 7af0ffff
+    m_LastClickedInstanceID: -3974
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000e5e00003aa70000f6be0000c2c20000e2c30000a0c40000a4b800006ccc000062d800008ade00006ac100008adb000078c3000090c80000d8b90000c6be00007ab8000046cf000094b80000fabd000008b9000016d300004cbf000018d5000092bb000092e70000dcbb000082bf000004da0000e8c30000e2bb00001a850100a0c5000000000000be0b0100
     m_RenameOverlay:
@@ -1463,7 +1463,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 91.599976}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 74
   m_SkipHiddenPackages: 1
   m_DirectoriesAreaWidth: 181.8
