@@ -2,7 +2,7 @@ Shader "MyShaders/Mask"
 {
     Properties
     {
-        [IntRange] _StencilRef ("Stencil Ref", Range(0, 255)) = 0
+        [IntRange] _StencilRef ("Stencil Ref", Range(0, 15)) = 0
     }
     SubShader
     {
