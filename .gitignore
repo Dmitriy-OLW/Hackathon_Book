@@ -1,7 +1,6 @@
 /[Ll]ibrary/
 /Library/
 /[Tt]emp/
-/[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
@@ -16,7 +15,6 @@
 */Library/
 */[Ll]ibrary/
 */[Tt]emp/
-*/[Oo]bj/
 */[Bb]uild/
 */[Bb]uilds/
 */[Ll]ogs/
@@ -118,7 +116,6 @@ crashlytics-build.properties
 /UnityLockfile
 
 #Visual Studio files
-*.[Oo]bj 
 *.user 
 *.aps 
 *.pch 
@@ -140,7 +137,6 @@ crashlytics-build.properties
 .pyc 
 .xml 
 ipch/ 
-obj/ 
 [Bb]in 
 [Dd]ebug/ 
 [Rr]elease/ 
