@@ -6781,6 +6781,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pause Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 725337512908107617, guid: 1741dc929d7a36e44b189a773fce0b0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8128668690302677060, guid: 1741dc929d7a36e44b189a773fce0b0d,
         type: 3}
       propertyPath: m_Camera
@@ -6803,6 +6808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pause Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521805307002857098, guid: fcca6559af607ff4eaf441a19a00e14b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8792177006268337615, guid: fcca6559af607ff4eaf441a19a00e14b,
         type: 3}
