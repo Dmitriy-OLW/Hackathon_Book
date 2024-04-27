@@ -18,8 +18,10 @@ public class Shader_Controller : MonoBehaviour
     // Start is called before the first frame update
 
     public Perehod _SC_good;
+    public Book_Vision_Mechanica _SC_you_can;
     public bool is_done;
     public float time;
+
     void Start()
     {
         is_done = false;
@@ -32,6 +34,7 @@ public class Shader_Controller : MonoBehaviour
     void Update()
     {
         if(_SC_good._is_good == true){
+            _SC_you_can.you_can = false;
             StartCoroutine(DissolveCo());
             _SC_good._is_good = false;
             
@@ -56,11 +59,12 @@ public class Shader_Controller : MonoBehaviour
                     skinnedMaterials[0].SetFloat("_DissolveAmot", counter);
                 
                 yield return new WaitForSeconds(refreshRate);
-                Debug.Log(counter);
+                //Debug.Log(counter);
                 if(counter >= 1f)
                 {
                     Debug.Log("Test");
                     skinnedMaterials[0].SetFloat("_DissolveAmot", 0f);
+                    _SC_you_can.you_can = true;
                     is_done = false;
                     _del.SetActive(false);
                 }

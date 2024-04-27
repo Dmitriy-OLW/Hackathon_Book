@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PickUpWeapon : MonoBehaviour
 {
@@ -14,10 +15,11 @@ public class PickUpWeapon : MonoBehaviour
 
     public GameObject camera;
     public float distance = 15f;
-    GameObject currentWeapon;
+    public GameObject currentWeapon;
     bool canPickUp = false;
 
     public GameObject[] Predmets;
+    public GameObject[] Iventory_kostel;
     public int vebor_predmets = 0;
 
     public GameObject _Nule_invent;
@@ -26,20 +28,22 @@ public class PickUpWeapon : MonoBehaviour
     //считываем позицияю мышки это будет начальная точка луча
     //Ray myray = Camera.main.ScreenPointToRay(Input.mousePosition);
     // Update is called once per frame
-
+    public TextMeshProUGUI counterText;
+    int book_counter=0;
    
     private void Start() {
         for(int i = 0; i<4; i++)
         {
             Predmets[i] = _Nule_invent;
         }
+        foreach(GameObject _prednet in Iventory_kostel){Deactivate_Activate(_prednet, false);}
     }
 
     
     void Update()
     {
         if (Input.GetKeyDown(_PickUp)) PickUp();
-        if (Input.GetKeyDown(_Drop)) Drop();
+        if (Input.GetKeyDown(_Drop)){ Drop(); inventory();}
         if (Input.GetKeyDown(_Slot1)) {vebor_predmets = 0;inventory();}
         if (Input.GetKeyDown(_Slot2)) {vebor_predmets = 1;inventory();}
         if (Input.GetKeyDown(_Slot3)) {vebor_predmets = 2;inventory();}
@@ -49,6 +53,24 @@ public class PickUpWeapon : MonoBehaviour
     void inventory()
     {
         foreach(GameObject _prednet in Predmets){Deactivate_Activate(_prednet, false);}
+        foreach(GameObject _prednet in Iventory_kostel){Deactivate_Activate(_prednet, false);}
+        for(int i = 0; i<Predmets.Length; i++)
+        {
+            if(Predmets[i].name == "apteka")
+            {
+                Deactivate_Activate(Iventory_kostel[i], true);
+            }
+            if(Predmets[i].name == "key")
+            {
+                Deactivate_Activate(Iventory_kostel[i+4], true);
+            }
+            if(Predmets[i].name == "truba")
+            {
+                Deactivate_Activate(Iventory_kostel[i+8], true);
+            }
+        }
+        currentWeapon = Predmets[vebor_predmets];
+        
         Deactivate_Activate(Predmets[vebor_predmets], true);
     }
 
@@ -73,7 +95,7 @@ public class PickUpWeapon : MonoBehaviour
             Debug.Log(filter.gameObject.name);
             if(filter.transform.tag == "Predmets" && hit.distance < 2f)
             {
-                if (Predmets[vebor_predmets].gameObject.name != _Nule_invent.gameObject.name) Drop();
+                if (Predmets[vebor_predmets].gameObject.name != _Nule_invent.gameObject.name){Drop(); inventory();} 
 
 
                 currentWeapon = hit.transform.gameObject;
@@ -85,6 +107,12 @@ public class PickUpWeapon : MonoBehaviour
                 currentWeapon.transform.localEulerAngles = new Vector3(10f, 0f, 0f);
                 canPickUp = true;
                 Predmets[vebor_predmets] = currentWeapon;
+            }
+            if (hit.transform.tag =="Book") //!!
+            {
+                Destroy(hit.transform.gameObject);
+                book_counter++;
+                counterText.text = book_counter+"/5";
             }
         }
 

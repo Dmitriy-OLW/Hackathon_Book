@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using TMPro;
 public class Time_Contoler : MonoBehaviour
 {
+    public MenuButtons _SC_safe;
     public KeyCode _T = KeyCode.Alpha0;
-   [SerializeField] private float time;
+    [SerializeField] private float time;
     [SerializeField] private TextMeshProUGUI timerText;
  
     private float _timeLeft = 0f;
@@ -16,6 +17,11 @@ public class Time_Contoler : MonoBehaviour
     }
     private void Update() {
         if (Input.GetKeyDown(_T)) StartTime();
+        if(_SC_safe.sohran == 2)
+        {
+            StartTime(); 
+            _SC_safe.sohran = 0;
+        }
     }
     private IEnumerator StartTimer()
     {
@@ -47,7 +53,15 @@ public class Time_Contoler : MonoBehaviour
         {
             timerText.text = "You Dead"; 
         }
+        if(_SC_safe.sohran == 1)
+        {
+            time = _timeLeft;
+            _timeLeft=0;
+        }
         
+
+        
+
 
     }
 

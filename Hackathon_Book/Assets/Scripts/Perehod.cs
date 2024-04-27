@@ -12,11 +12,12 @@ public class Perehod : MonoBehaviour
     public KeyCode kone = KeyCode.Alpha8;
     public Book_Vision_Mechanica _SC_prverka;
     public bool _is_good;
+    public Book_Vision_Mechanica _SC_you_can;
 
  
     void Start()
     {
-
+        _del.SetActive(false);
         bg = GetComponent<Image>();
         bg.color = new Color(1f, 1f, 1f, 0f);
         _is_good = false;
@@ -26,6 +27,7 @@ public class Perehod : MonoBehaviour
         
         if(_SC_prverka.active_perhod == true)
         {
+            _SC_you_can.you_can = false;
             //_SC_prverka.active_perhod = false;
             Debug.Log("1234567890");
             
@@ -64,6 +66,7 @@ public class Perehod : MonoBehaviour
  
         bg.color = c1;
         _is_good = true;
+        _SC_you_can.nacali = true;
         _del.SetActive(true);
         bg.color = new Color(1f, 1f, 1f, 0f);
     }
