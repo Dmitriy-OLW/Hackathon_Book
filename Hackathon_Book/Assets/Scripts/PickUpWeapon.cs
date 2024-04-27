@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PickUpWeapon : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class PickUpWeapon : MonoBehaviour
     public int vebor_predmets = 0;
 
     public GameObject _Nule_invent;
+
+    [SerializeField] TextMeshPro counterText;
+    int book_counter=0;
    
     private void Start() {
         for(int i = 0; i<4; i++)
@@ -64,9 +68,14 @@ public class PickUpWeapon : MonoBehaviour
                 canPickUp = true;
                 Predmets[vebor_predmets] = currentWeapon;
             }
-        }
 
-        
+            if (hit.transform.tag =="Book") //!!
+            {
+                Destroy(hit.transform.gameObject);
+                book_counter++;
+                counterText.text = book_counter+"/5";
+            }
+        }        
     }
 
     void Drop()
