@@ -13,6 +13,10 @@ public class MenuButtons : MonoBehaviour
 
     [SerializeField] GameObject Main_Canv;
     [SerializeField] GameObject Nast_Canv;
+    [SerializeField] GameObject buton_off;
+    [SerializeField] GameObject buton_on;
+    [SerializeField] GameObject player;
+    public _Player_Health _SC_dead;
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -20,6 +24,16 @@ public class MenuButtons : MonoBehaviour
     private void Start() {
         Nast_Canv.SetActive(false);
         Nast_Cam.SetActive(false);
+    }
+    private void Update() {
+        if(_SC_dead.playerHP <= 0){
+            ToNastr();
+            buton_off.SetActive(false);
+            player.SetActive(false);
+            buton_on.SetActive(true);
+            
+        }
+        
     }
 
 

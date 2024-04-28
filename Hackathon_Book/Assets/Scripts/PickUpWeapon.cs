@@ -72,6 +72,9 @@ public class PickUpWeapon : MonoBehaviour
         currentWeapon = Predmets[vebor_predmets];
         
         Deactivate_Activate(Predmets[vebor_predmets], true);
+        Deactivate_Activate(Iventory_kostel[vebor_predmets], false);
+        Deactivate_Activate(Iventory_kostel[vebor_predmets+4], false);
+        Deactivate_Activate(Iventory_kostel[vebor_predmets+8], false);
     }
 
     void PickUp()

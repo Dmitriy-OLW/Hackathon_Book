@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Enemy_Attack : MonoBehaviour
 {
-    public Player_Health _HS;
+    public _Player_Health _HS;
     public Enemy_Liminal _EAS;
+    public int yron = 20;
     private bool Anti_Double = false;
 
     private void OnTriggerEnter(Collider other)
@@ -17,7 +18,7 @@ public class Enemy_Attack : MonoBehaviour
             {
                 Debug.Log("Atack");
                 Anti_Double = true;
-                _HS.Health -= 10f;
+                _HS.playerHP -= yron;
             }
             else{Anti_Double = false;}
         }
