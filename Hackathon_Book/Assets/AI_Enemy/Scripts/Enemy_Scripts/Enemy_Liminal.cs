@@ -8,7 +8,7 @@ using UnityEngine.Experimental.AI;
 
 public class Enemy_Liminal : MonoBehaviour
 {
-    public Player_Health _HS;
+    //public _Player_Health _HS;
     private Enemy_see CanSeePlayS;
     
     public bool isAttack = false; // разрешение на атаку
