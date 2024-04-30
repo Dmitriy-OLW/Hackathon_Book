@@ -26,7 +26,7 @@ public class Medic_Kit_Health_Controller : MonoBehaviour
     void Update()
     {
         
-
+        try{
         if(Input.GetKeyDown(_Med) && SC_Apteka.currentWeapon.name == "apteka")
         {
             //Debug.Log("Test1");
@@ -38,6 +38,8 @@ public class Medic_Kit_Health_Controller : MonoBehaviour
             Destroy(gameObject);
 			
         }
+        }
+        catch{Debug.Log("fail");}
     }
  
 }

@@ -8,13 +8,19 @@ public class Book_Vision_Mechanica : MonoBehaviour
     public KeyCode world_1 = KeyCode.Keypad2;
     //public KeyCode world_2 = KeyCode.Keypad3;
     public GameObject[] Mask_Vid_World;
+    public GameObject[] Worlds;
     public bool active_perhod;
     public bool you_can = true;
     public bool nacali = false;
     public bool mir_is = false;
+
+    public GameObject[] models;
+
+     public GameObject audiis;
     void Start()
     {
         active_perhod = false;
+        Deactivate_Activate_World(Worlds[1], false);
         Mask_Vid_World[0] = GameObject.Find("Mask0");
         Mask_Vid_World[1] = GameObject.Find("Mask1");
         //Mask_Vid_World[2] = GameObject.Find("Mask2");
@@ -29,10 +35,18 @@ public class Book_Vision_Mechanica : MonoBehaviour
         }
         if(nacali == true && mir_is == false){
             mask_on_off(Mask_Vid_World, 0);
+            Deactivate_Activate_World(Worlds[0], true);
+            Deactivate_Activate_World(Worlds[1], false);
+            foreach(GameObject telo in models){Deactivate_Activate_World(telo, true);}
+            audiis.SetActive(true);
             nacali = false;
         }
         if(nacali == true && mir_is == true){
            mask_on_off(Mask_Vid_World, 1);
+           Deactivate_Activate_World(Worlds[1], true);
+           Deactivate_Activate_World(Worlds[0], false);
+           foreach(GameObject telo in models){Deactivate_Activate_World(telo, false);}
+           audiis.SetActive(false);
            nacali = false;
         }
         //  if(Input.GetKeyDown(world_2)){

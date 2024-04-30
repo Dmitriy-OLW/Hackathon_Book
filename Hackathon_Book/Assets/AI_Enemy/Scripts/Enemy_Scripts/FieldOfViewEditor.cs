@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 #if UNITY_EDITOR // => Ignore from here to next endif if not in editor
 using UnityEditor;
@@ -33,3 +34,4 @@ public class FieldOfViewEditor : Editor
         return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
 }
+*/

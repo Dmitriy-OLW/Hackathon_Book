@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Predmets
+  - Telo_Player_Health
+  - Radiation
+  - Book
   layers:
   - Default
   - TransparentFX
